@@ -1,0 +1,107 @@
+/* 输入框 */
+
+.input(@width, @border:1px solid @input-border-color, @height:34px) {
+	width: @width;
+	height: @height!important;
+	line-height: @height;
+	border: @border;
+	font-size: 14px;
+	border-radius: 2px;
+
+	&:focus {
+		border: 1px solid @blue-light;
+	}
+}
+/* 按钮 80*32 */
+
+.button1(@background_color, @color, @border:none, @width: 80px, @height: 32px, @font-size:14px) {
+	width: @width;
+	height: @height;
+	line-height: @height;
+	background-color: @background_color!important;
+	color: @color!important;
+	border: @border!important;
+	font-size: @font-size!important;
+	padding: 0!important !important;
+	border-radius: 4px!important;
+	box-shadow: 1px 1px 1px #acaeb8;
+
+	&.is-disabled {
+		background-color: RGB(189,189,189)!important;
+
+		&:hover {
+			background-color: RGB(189,189,189)!important;
+		}
+	}
+}
+/* 按钮 90*34 */
+
+.button2(@background_color, @color, @border:none, @width: 90px, @height: 34px, @font-size:16px) {
+	width: @width;
+	height: @height;
+	line-height: @height;
+	background-color: @background_color!important;
+	color: @color!important;
+	border: @border!important;
+	font-size: @font-size!important;
+	padding: 0!important !important;
+	border-radius: 4px!important;
+	box-shadow: 1px 1px 1px #acaeb8;
+
+	&.is-disabled {
+		background-color: RGB(189,189,189)!important;
+
+		&:hover {
+			background-color: RGB(189,189,189)!important;
+		}
+	}
+}
+/*
+* 编辑弹出框的共通样式
+* @lastInputMarginBottom 最后一个输入项距离按钮的下边距
+* @dialogWidth 总弹出框的宽度
+* @labelWidth lable的宽度
+* @inputWidth 输入框的宽度
+*/
+
+.el-dialog(@dialogWidth, @lastInputMarginBottom, @labelWidth:100px, @inputWidth:261px) {
+	width: @dialogWidth;
+
+	.el-form-item {
+		&:nth-last-child(2) {
+			margin-bottom: @lastInputMarginBottom;
+		}
+
+		&.btn-wrap {
+			text-align: center;
+		}
+
+		.el-form-item__label {
+			width: @labelWidth!important;
+		}
+
+		.el-input {
+			width: @inputWidth;
+		}
+	}
+}
+/**
+* 表格的宽度，还有分页的宽度
+*/
+
+.fixedTableWidth(@width) {
+	.block,
+	.fixedTable .el-table {
+		max-width: @width;
+	}
+}
+
+.transition(@name, @time: 0.1s) {
+	transition: @name @time;
+	-moz-transition: @name @time;
+	/* Firefox 4 */
+	-webkit-transition: @name @time;
+	/* Safari 和 Chrome */
+	-o-transition: @name @time;
+	/* Opera */
+}

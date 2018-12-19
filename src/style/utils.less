@@ -1,0 +1,44 @@
+.box-sizing {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    /* Safari */
+  }
+  
+  .inlineBlock {
+    display: inline-block;
+  }
+  
+  .heightLine(@height, @lineHeight: @height) {
+    height: @height;
+    line-height: @lineHeight;
+  }
+  
+  .borderRadius (@radius: 2px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+  }
+  
+  .dispalyFelx() {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+  }
+  
+  .justifyContent(@value: space-between) {
+    justify-content: @value;
+    -webkit-justify-content: @value;
+    -moz-justify-content: @value;
+    -o-justify-content: @value;
+  }
+  
+  .dispalyInlineFelx() {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -o-inline-flex;
+  }
+  
